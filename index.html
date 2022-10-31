@@ -13,7 +13,8 @@
 	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	</head>
-	<style>
+	<style> 
+	
 		.ultima {
 			width: 48rem !important;
 			height: 100% !important;
@@ -31,6 +32,9 @@
 		}
 		.slideL {
 			animation: slideL 2s;
+		}
+		.dobra-2 {
+			width: 90% !important;
 		}
 		@keyframes slideL {
 			from {
@@ -52,6 +56,57 @@
 				transform: translateX(0px);
 			}
 		}
+
+		.desk {
+			display: block;
+		}
+		.mobile {
+			display: none;
+		}
+		.videoclipe {
+			max-height: 40vh;
+			max-width: 90vw;
+		}
+
+		@media (max-width: 1200px) {
+			
+			h2.major:after {
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.flex-center {
+				display: flex !important;
+				justify-content: center !important;
+				align-items: center !important;
+			}
+			.desk {
+				display: none;
+			}
+			.mobile {
+				display: block;
+			}
+			.panel {
+				flex-direction: column !important;
+				width: 100vw !important;
+				
+			}
+			.dobra-2 {
+				width: 100vw !important;
+			}
+			.dobra-1 {
+				flex-direction: column-reverse !important;
+				align-items: center !important;
+			}
+			.circle {
+				transform: rotate(90deg);
+				padding-top: 2px;
+			}
+			.apresentacao {
+				align-items: center;
+			}
+			
+
+		}
 	</style>
 	<body class="is-preload">
 
@@ -63,8 +118,8 @@
 					<div id="wrapper">
 
 						<!-- Panel (Banner) -->
-							<section class="panel banner right">
-								<div class="content color0 span-3-75 ">
+							<section class="panel banner right dobra-1">
+								<div  class="content color0 span-3-75 apresentacao ">
 									<h1 class="major slideL">Olá, meu nome é<br> Guilherme Schindler
 									</h1>
 									<p>Sou apaixonado por fotografia e vídeo, e tudo o que envolve exercer minha criatividade! :)</p>
@@ -79,13 +134,13 @@
 
 						<!-- Panel (Spotlight) -->
 							<section class="panel spotlight medium right" id="first">
-								<div style="width: 90% !important;" class="content span-7">
+								<div  class="content span-7 dobra-2">
 									
 										<!-- <img width="300px"src="./first.webp.webp" alt="" /> -->
 									
 									<h2 class="major">Um apaixonado pela arte</h2>
 									<p >Sempre tive em contato com a arte desde muito novo através do skate, da música e de outros esportes e acompanhar os meus ídolos através de uma tela me despertou a olhar para a forma como imagens e sons se tornam uma combinação poderosa e causam sensações e emoções nas pessoas é o que me faz um amante dessa arte. É o que fez eu me aventurar com as câmeras e ter um olhar diferente sobre produção visual.</p>
-									<ul class="actions ">
+									<ul style="margin: 0 auto ;" class="actions ">
 										<li><a href="#video" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
 									</ul>
 								</div>
@@ -105,15 +160,10 @@
 										cliente ou de um fã da marca.
 										</p>
 								</div>
-								<div  style="display:flex ;align-items: center; justify-content: center;" class="inner">
-									<video   controls="controls" loading="lazy"  src="./clipe.mp4" width="860" height="515"></video>
+								<div  style="overflow-y: hidden;display:flex ;align-items: center; justify-content: center;" class="inner">
+									<video class="videoclipe" style=""  controls="controls" loading="lazy"  src="./clipe.mp4" width="860" height="515"></video>
 								
-									<ul  style="display: flex; flex-direction:column; justify-content: center; align-items:center;" class="actions">
-										<li  style="margin-top:30px ;" ><a   href="#continuar"class="button primary"> CONTINUE PARA O LADO <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-											<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-										  </svg></i>
-										</a></li>
-									</ul>
+									
 								</div>
 							</section>
 							<section id="continuar" class="panel color1">
@@ -128,7 +178,7 @@
 									<video  controls="controls" loading="lazy"  src="./kuki.mp4.mp4" width="290" height="515"></video>
 									
 									<ul style="display: flex; flex-direction:column; justify-content: center; align-items:center;" class="actions">
-										<li style="margin-top:30px ;" ><a  href="#objetivos"class="button primary"> MAIS SOBRE MIM <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+										<li style="margin-top:30px ;" ><a style="display: flex; align-items: center" href="#objetivos"class="button primary"> MAIS SOBRE MIM <svg class="desk" style="margin-left:10px ;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
 											<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 										  </svg></i>
 										</a></li>
@@ -140,11 +190,11 @@
 
 						<!-- Panel -->
 							<section id="objetivos" class="panel">
-								<div class="intro color2 bg">
+								<div style="width:56rem ;" class="intro color2 bg">
 									<h2 class="major">Meus objetivos com a 800k  </h2>
 									<p style="font-size: 22px;
 									line-height: 100%;">
-										A cerca de 3 anos trabalho com fotográfía, realizando auxílios para uma fotógrafa, nos horários livres, onde adiquiri conhecimentos sobre equipamentos fotográficos e informações técnicas.
+										A cerca de 3 anos trabalho com fotografia, realizando auxílios para uma fotógrafa, nos horários livres, onde adiquiri conhecimentos sobre equipamentos fotográficos e informações técnicas.
 										<br><br>
 										Atualmente não trabalho na área full-time, e
 										através de uma oportunidade, tenho a possibilidade de transformar um hobbie em algo produtivo e satisfatório, tenho um grande desejo de crescer profissionalmente em uma empresa onde eu possa expressar minha criatividade de uma forma livre, visando sempre o melhor no local onde estou e vibrar com resultados através do que eu posso somar com a minha capacidade.
@@ -165,8 +215,8 @@
 							</section>
 
 						<!-- Panel -->
-							<section id="final" class="panel color4-alt">
-								<div class="intro color4">
+							<section id="final" class="  panel color4-alt">
+								<div class="intro color4 flex-center">
 									<h2 class="major">Vamos trabalhar juntos?</h2>
 									<ul class="actions">
 										<li><a href="https://wa.me/555191508443?text=Olá%20Gabriel!"  target="_blank" class="button primary"> IR PARA WHATSAPP</a></li>
